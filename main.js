@@ -16,6 +16,7 @@ class Main{
         this.domicilios = new Direccion("Porfirio Gaytan", 362, 0, "Juan José Rios 2", 28984, "Colima", "Villa de Alvarez")
         this.clientes = new Cliente("José Gabino Morales González", this.domicilios, 3123194899)
         this.productos = new Producto("Pizza Americana", this.valores)
+        this.elementosPedidos = new ElementoPedido(this.productos, 3, this.valores)
     }
     getPrecio(){
         console.log(`${this.valores.getPrecio()}`)
@@ -42,6 +43,9 @@ class Main{
     getProducto(){
         console.log(`${this.productos.getDescripcion()}`)
     }
+    getElementoPedido(){
+        console.log(`${this.elementosPedidos.getDescripccion()}`)
+    }
 }
 let app = new Main()
-app.getProducto()
+app.getElementoPedido()

@@ -3,6 +3,6 @@ export default class Precio{
         this.valores = valor
     }
     getPrecio(){
-        return `$${this.valores}`
+        return `$${parseFloat(this.valores)}`
     }
 }
