@@ -13,6 +13,9 @@ class Main{
         this.valores = new Precio(127.50)
         this.tiempos = new Tiempo(5,30,"PM")
         this.fechas = new Fecha(30,4,2001)
+        this.domicilios = new Direccion("Porfirio Gaytan", 362, 0, "Juan José Rios 2", 28984, "Colima", "Villa de Alvarez")
+        this.clientes = new Cliente("José Gabino Morales González", this.domicilios, 3123194899)
+        this.productos = new Producto("Pizza Americana", this.valores)
     }
     getPrecio(){
         console.log(`${this.valores.getPrecio()}`)
@@ -29,6 +32,16 @@ class Main{
         console.log(`Fecha ${this.fechas.getFecha()}`)
         console.log(`Día ${this.fechas.getDiaFecha()}`)
     }
+    getDomicilio(){
+        console.log(`${this.domicilios.getFormatoCorto()}`)
+        console.log(`${this.domicilios.getFormatoExtendido()}`)
+    }
+    getCliente(){
+        console.log(`${this.clientes.getPerfil()}`)
+    }
+    getProducto(){
+        console.log(`${this.productos.getDescripcion()}`)
+    }
 }
 let app = new Main()
-app.getFecha()
+app.getProducto()
