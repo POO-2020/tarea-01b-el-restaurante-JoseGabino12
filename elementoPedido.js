@@ -12,6 +12,6 @@ export default class elementoPedido{
         this.precios = precio
     }
     getDescripccion(){
-        return `${this.cantidades} x ${this.productos.nombres} = ${this.productos.precios.valor*this.cantidades}`
+        return `${this.cantidades} x ${this.productos.nombres} = ${this.productos.precios.valores*this.cantidades}`
     }
 }
