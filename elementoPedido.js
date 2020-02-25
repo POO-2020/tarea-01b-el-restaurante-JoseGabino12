@@ -1,5 +1,4 @@
 import Precio from "./precio.js"
-var suma
 export default class elementoPedido{
     /**
      * 
@@ -13,7 +12,6 @@ export default class elementoPedido{
         this.precios = precio
     }
     getDescripccion(){
-        suma = (parseInt(this.cantidades) + parseInt(this.precios.getPrecio()))
-        return `${this.cantidades} x ${this.productos.getDescripcion()} ${parseFloat(this.precios.getPrecio()) + 10.10}`
+        return `${this.cantidades} x ${this.productos.nombres} = ${this.productos.precios.valor*this.cantidades}`
     }
 }

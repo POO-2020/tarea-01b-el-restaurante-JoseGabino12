@@ -1,8 +1,8 @@
 export default class Precio{
     constructor(valor){
-        this.valores = valor
+        this.valor = valor
     }
     getPrecio(){
-        return `$${parseFloat(this.valores)}`
+        return `$${parseFloat(this.valor)}`
     }
 }
