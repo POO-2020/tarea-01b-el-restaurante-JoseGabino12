@@ -17,6 +17,7 @@ class Main{
         this.clientes = new Cliente("José Gabino Morales González", this.domicilios, 3123194899)
         this.productos = new Producto("Pizza Americana", this.valores)
         this.elementosPedidos = new ElementoPedido(this.productos, 3, this.valores)
+        this.pedidos = new Pedido(this.fechas, this.tiempos, this.clientes, this.elementosPedidos)
     }
     getPrecio(){
         console.log(`${this.valores.getPrecio()}`)
@@ -46,6 +47,9 @@ class Main{
     getElementoPedido(){
         console.log(`${this.elementosPedidos.getDescripccion()}`)
     }
+    getPedido(){
+        console.log(`${this.pedidos.getResumen()}`)
+    }
 }
 let app = new Main()
-app.getElementoPedido()
+app.getPedido()
