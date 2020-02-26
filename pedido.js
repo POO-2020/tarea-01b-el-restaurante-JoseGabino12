@@ -17,12 +17,12 @@ export default class Pedido{
         return `${productos}`
     }
     getCostoTotal(){
-        let total = 0
+        let a = 0
         this.elementoPedidos.forEach((elemento) => {
-            total = (total + (elemento.productos.precios.valores * elemento.cantidades))
+            a = (a + (elemento.productos.precios.valores * elemento.cantidades))
         })
-        total = new Precio(total)
-        return `${total.getPrecio()}`
+        a = new Precio(a)
+        return `${a.getPrecio()}`
     }
     listarElemeto(){
         this.elementoPedidos.forEach((elemento, i) => {
@@ -30,11 +30,11 @@ export default class Pedido{
         })
     }
     getNumeroElementos(){
-        let numeroDeElementos
+        let array = Array()
         this.elementoPedidos.forEach((elemento, i) => {
-            numeroDeElementos = numeroDeElementos + 1
+        array[i] = elemento[i]
         })
-        return `${numeroDeElementos}`
+        return `${array.length}`
     }
     getResumen(){
         return `${this.fechas.getFecha()} ${this.horas.getFormato12()} - ${this.getNumeroElementos()} elementos con ${this.getNumeroProductos()} productos - total ${this.getCostoTotal()}`;

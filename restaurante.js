@@ -20,7 +20,7 @@ export default class Restaurante{
     }
     listarPedidos(){
         this.pedidos.forEach( (pedido, i) => {
-            console.log(`(${i+1}) ~ ${pedido.getResumen()}`)
+            console.log(`Numero.- ${i+1} - ${pedido.getResumen()}`)
         })
     }
 }
